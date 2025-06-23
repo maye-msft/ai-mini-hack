@@ -117,4 +117,4 @@ cython_debug/
 .pytest_cache/
 .ruff_cache/
 
-.DSStore
+.DS_Store
