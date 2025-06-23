@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    
+    // Jupyter Notebook Settings
+    "notebook.defaultEditor": "jupyter.notebook.ipynb",
+    "jupyter.askForKernelRestart": false,
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    
+    // File Associations
+    "files.associations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    
+    // Workbench Editor Associations
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.copilotmd": "vscode.markdown.preview.editor"
+    },
+    
+    // Python Settings for Jupyter
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "jupyter.jupyterServerType": "local"
+}
