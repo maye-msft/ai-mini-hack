@@ -1,0 +1,23 @@
+# ====================================
+# Azure AI Foundry Project Configuration
+# ====================================
+AIPROJECT_ENDPOINT=""
+
+# ====================================
+# Azure AI Foundry Configuration
+# ====================================
+AZURE_OPENAI_ENDPOINT=""
+AZURE_OPENAI_KEY=""
+
+# Model deployment names
+MODEL_DEPLOYMENT_NAME=""
+MODEL_DEPLOYMENT_API_VERSION="2024-12-01-preview"
+EMBEDDING_MODEL_DEPLOYMENT_NAME=""
+EMBEDDING_MODEL_DEPLOYMENT_API_VERSION="2023-05-15"
+
+# ====================================
+# Azure AI Search Configuration
+# ====================================
+AZURE_SEARCH_ENDPOINT=""
+AZURE_SEARCH_KEY=""
+AZURE_SEARCH_INDEX_NAME="hotel-brochures"

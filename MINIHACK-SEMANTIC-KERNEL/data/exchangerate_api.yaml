@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: Frankfurter Currency Converter
+  version: 1.0.0
+servers:
+  - url: https://api.frankfurter.app
+paths:
+  /latest:
+    get:
+      operationId: convertCurrency
+      summary: Convert currency
+      description: Converts currency using latest exchange rates
+      parameters:
+        - name: amount
+          in: query
+          required: true
+          schema:
+            type: number
+        - name: from
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: to
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful conversion
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  amount:
+                    type: number
+                  base:
+                    type: string
+                  date:
+                    type: string
+                  rates:
+                    type: object
+                    additionalProperties:
+                      type: number
