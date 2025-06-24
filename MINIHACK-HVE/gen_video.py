@@ -17,7 +17,7 @@ body = {
     "prompt": "A cat playing piano in a jazz bar.",
     "width": 480,
     "height": 480,
-    "n_seconds": 5,
+    "n_seconds": 10,
     "model": "sora"
 }
 response = requests.post(create_url, headers=headers, json=body)

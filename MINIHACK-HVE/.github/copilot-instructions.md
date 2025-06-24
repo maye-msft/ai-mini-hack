@@ -49,7 +49,7 @@ After completing a user story, please
 This is a project that intends to build a simple web application for Video Generation with Azure OpenAI Sora.
 
 - Use Azure OpenAI Sora
-- Always run python in a dvirtual environment
+- Always run python in a virtual environment
 - Learn from the existing `gen_video.py` for configuration and implementation
 - Don't read the image doc/Screenshot_Get_API_Key.png
 
