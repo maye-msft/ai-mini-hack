@@ -1,0 +1,46 @@
+{
+  "name": "Python & Jupyter DevContainer with PySpark",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.black-formatter",
+        "ms-python.pylint"
+      ]
+    }
+  },
+  "forwardPorts": [8080, 4040, 8888, 7077],
+  "portsAttributes": {
+    "8080": {
+      "label": "Spark Master UI",
+      "onAutoForward": "notify"
+    },
+    "4040": {
+      "label": "Spark Application UI",
+      "onAutoForward": "notify"
+    },
+    "8888": {
+      "label": "Jupyter",
+      "onAutoForward": "notify"
+    },
+    "7077": {
+      "label": "Spark Master",
+      "onAutoForward": "silent"
+    }
+  },
+  "remoteEnv": {
+    "SPARK_HOME": "/opt/spark",
+    "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk-arm64",
+    "PYSPARK_PYTHON": "/usr/local/bin/python",
+    "PYSPARK_DRIVER_PYTHON": "/usr/local/bin/python"
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install -r .devcontainer/requirements.txt"
+}
