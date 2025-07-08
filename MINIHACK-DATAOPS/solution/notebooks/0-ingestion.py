@@ -3,38 +3,52 @@
 
 # COMMAND ----------
 
-from pyspark.sql import SparkSession
-from pyspark.dbutils import DBUtils
-spark = SparkSession.builder.getOrCreate()
-dbutils = DBUtils(spark)
-ingest_datasets_path = '/tmp/bdd100k'
-dbutils.fs.ls(ingest_datasets_path)
-
-# COMMAND ----------
-
 # MAGIC %sh
-# MAGIC rm -rf /tmp/bdd100k
 # MAGIC mkdir -p /tmp/bdd100k
+# MAGIC cd /tmp/bdd100k
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/LICENSE.txt
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z01
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z02
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z03
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z04
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z05
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z06
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z07
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z08
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z09
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z10
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z11
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z12
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z13
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.z14
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/images.zip
+# MAGIC curl -O https://raw.githubusercontent.com/maye-msft/ai-mini-hack/refs/heads/main/MINIHACK-DATAOPS/data/labels.zip
+# MAGIC
+# MAGIC
 
 # COMMAND ----------
 
-dbutils.fs.cp('/tmp/bdd100k/images.zip', "file:/tmp/bdd100k")
-dbutils.fs.cp('/tmp/bdd100k/labels.zip', "file:/tmp/bdd100k")
+# MAGIC %sh ls -al /tmp/bdd100k
 
 # COMMAND ----------
 
 # MAGIC %sh
 # MAGIC ls /tmp/bdd100k
+# MAGIC rm -rf /tmp/bdd100k/extracted
 # MAGIC mkdir -p /tmp/bdd100k/extracted
-# MAGIC unzip -o /tmp/bdd100k/images.zip -d /tmp/bdd100k/extracted
 # MAGIC unzip -o /tmp/bdd100k/labels.zip -d /tmp/bdd100k/extracted
-# MAGIC ls -l /tmp/bdd100k/extracted
+# MAGIC
 
 # COMMAND ----------
 
 # MAGIC %sh
-# MAGIC rm -rf /tmp/bdd100k/extracted/__MACOSX/train/
-# MAGIC ls -1 /tmp/bdd100k/extracted/train | wc -l
+# MAGIC zip -F /tmp/bdd100k/images.zip --out /tmp/bdd100k/images_fixed.zip
+# MAGIC unzip -o /tmp/bdd100k/images_fixed.zip -d /tmp/bdd100k/extracted
+
+# COMMAND ----------
+
+# MAGIC %sh
+# MAGIC ls -1 /tmp/bdd100k/extracted | wc -l
 
 # COMMAND ----------
 
@@ -180,12 +194,12 @@ def copy_files_parallel(source_base, dest_base, max_workers=10):
 # COMMAND ----------
 
 # Define your paths
-source_path = "file:/tmp/bdd100k/extracted/train"
+source_path = "file:/tmp/bdd100k/extracted/"
 
 # You can also adjust the number of workers based on your cluster resources
 # More workers = faster copy but more resource usage
 num_workers = 15
-
+dbutils.fs.mkdirs(bronze_path+'/train')
 # Start the parallel copy
 completed, failed = copy_files_parallel(source_path, bronze_path+'/train', max_workers=num_workers)
 

@@ -168,7 +168,12 @@ df_labels = create_labels_dataframe(df_raw)
 
 # COMMAND ----------
 
+# MAGIC %sql drop table if exists std_images_table
+
+# COMMAND ----------
+
 print("Writing images table as managed Delta table...")
+dbutils.fs.rm(f"{silver_path}/images", True)
 df_images.write \
     .format("delta") \
     .mode("overwrite") \
@@ -180,6 +185,10 @@ df_images.write \
 
 # MAGIC %sql
 # MAGIC select * from std_images_table
+
+# COMMAND ----------
+
+# MAGIC %sql drop table if exists std_labels_table
 
 # COMMAND ----------
 

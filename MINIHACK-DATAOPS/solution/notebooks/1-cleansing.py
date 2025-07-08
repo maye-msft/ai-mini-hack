@@ -151,3 +151,6 @@ len(dbutils.fs.ls(qualified_dir))
 # COMMAND ----------
 
 len(dbutils.fs.ls(unqualified_dir))
+
+# COMMAND ----------
+
