@@ -1,0 +1,126 @@
+{
+  "image_filename": "17d21997-6f076249.jpg",
+  "video_name": "17d21997-6f076249.jpg",
+  "frame_index": 0,
+  "metadata": {
+    "weather": "clear",
+    "scene": "city street",
+    "timeofday": "daytime"
+  },
+  "labels": [
+    {
+      "id": "168134",
+      "attributes": {
+        "occluded": false,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "bus",
+      "box2d": {
+        "x1": 352.971159,
+        "y1": 206.681194,
+        "x2": 1131.769862,
+        "y2": 549.652162
+      }
+    },
+    {
+      "id": "168135",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "motorcycle",
+      "box2d": {
+        "x1": 1216.498551,
+        "y1": 398.011068,
+        "x2": 1256.936176,
+        "y2": 436.951003
+      }
+    },
+    {
+      "id": "168136",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "motorcycle",
+      "box2d": {
+        "x1": 1123.641783,
+        "y1": 396.513378,
+        "x2": 1156.590957,
+        "y2": 439.946383
+      }
+    },
+    {
+      "id": "168137",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "rider",
+      "box2d": {
+        "x1": 1227.62201,
+        "y1": 374.422453,
+        "x2": 1257.575806,
+        "y2": 423.846216
+      }
+    },
+    {
+      "id": "168138",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "rider",
+      "box2d": {
+        "x1": 1127.276793,
+        "y1": 377.417833,
+        "x2": 1154.235209,
+        "y2": 422.348527
+      }
+    },
+    {
+      "id": "168139",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "pedestrian",
+      "box2d": {
+        "x1": 1179.695936,
+        "y1": 375.920143,
+        "x2": 1202.161284,
+        "y2": 429.836976
+      }
+    },
+    {
+      "id": "168140",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "pedestrian",
+      "box2d": {
+        "x1": 1169.212108,
+        "y1": 387.901662,
+        "x2": 1182.691315,
+        "y2": 419.353149
+      }
+    }
+  ],
+  "attributes": {
+    "weather": "clear",
+    "timeofday": "daytime",
+    "scene": "city street"
+  },
+  "processing_info": {
+    "processed_at": "2025-07-07T01:09:16.708273",
+    "source": "bdd100k_complete_preprocessing_refactored"
+  }
+}

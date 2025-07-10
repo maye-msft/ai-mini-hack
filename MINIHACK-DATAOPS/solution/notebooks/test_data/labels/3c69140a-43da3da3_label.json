@@ -1,0 +1,186 @@
+{
+  "image_filename": "3c69140a-43da3da3.jpg",
+  "video_name": "3c69140a-43da3da3.jpg",
+  "frame_index": 0,
+  "metadata": {
+    "weather": "partly cloudy",
+    "scene": "residential",
+    "timeofday": "daytime"
+  },
+  "labels": [
+    {
+      "id": "430510",
+      "attributes": {
+        "occluded": false,
+        "truncated": true,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 0.0,
+        "y1": 379.542777,
+        "x2": 62.816313,
+        "y2": 461.534596
+      }
+    },
+    {
+      "id": "430511",
+      "attributes": {
+        "occluded": false,
+        "truncated": true,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 921.506311,
+        "y1": 375.57543,
+        "x2": 1279.469116,
+        "y2": 648.499534
+      }
+    },
+    {
+      "id": "430512",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 564.685594,
+        "y1": 375.906043,
+        "x2": 587.167222,
+        "y2": 402.355017
+      }
+    },
+    {
+      "id": "430513",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 550.138659,
+        "y1": 379.873389,
+        "x2": 573.942735,
+        "y2": 407.644812
+      }
+    },
+    {
+      "id": "430514",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 511.787646,
+        "y1": 371.938697,
+        "x2": 559.3958,
+        "y2": 415.579505
+      }
+    },
+    {
+      "id": "430515",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 497.240711,
+        "y1": 378.55094,
+        "x2": 535.591723,
+        "y2": 430.126439
+      }
+    },
+    {
+      "id": "430516",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 449.632558,
+        "y1": 356.069312,
+        "x2": 505.175402,
+        "y2": 442.028478
+      }
+    },
+    {
+      "id": "430517",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 224.816279,
+        "y1": 354.416251,
+        "x2": 347.804008,
+        "y2": 407.314199
+      }
+    },
+    {
+      "id": "430518",
+      "attributes": {
+        "occluded": false,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 331.934623,
+        "y1": 357.061149,
+        "x2": 489.306018,
+        "y2": 462.857045
+      }
+    },
+    {
+      "id": "430519",
+      "attributes": {
+        "occluded": false,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 579.673347,
+        "y1": 341.191764,
+        "x2": 721.816558,
+        "y2": 472.114186
+      }
+    },
+    {
+      "id": "430520",
+      "attributes": {
+        "occluded": false,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 750.269222,
+        "y1": 388.799917,
+        "x2": 879.869194,
+        "y2": 481.371326
+      }
+    }
+  ],
+  "attributes": {
+    "weather": "partly cloudy",
+    "timeofday": "daytime",
+    "scene": "residential"
+  },
+  "processing_info": {
+    "processed_at": "2025-07-07T01:09:13.261058",
+    "source": "bdd100k_complete_preprocessing_refactored"
+  }
+}

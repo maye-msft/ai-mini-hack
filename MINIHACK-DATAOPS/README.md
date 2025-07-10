@@ -101,11 +101,6 @@ Transform Bronze layer data to Silver layer by:
 3. Creating relationships between images and metadata
 4. Storing results in Delta Lake format
 
-### Skills You'll Learn
-- Data schema design
-- Spark DataFrame operations
-- Delta Lake table management
-
 ### Reference Materials
 - **Delta Lake Tutorial**: [Tutorial: Delta Lake - Azure Databricks](https://learn.microsoft.com/en-us/azure/databricks/delta/tutorial)
 - **What is Delta Lake**: [What is Delta Lake in Azure Databricks?](https://learn.microsoft.com/en-us/azure/databricks/delta/)
@@ -129,11 +124,6 @@ Analyze Silver layer data to:
 4. **Data Visualization**: Create charts and graphs for insights
 5. Store aggregated results in the Gold layer
 
-### Skills You'll Learn
-- Data aggregation techniques
-- Statistical analysis with Spark
-- Data visualization in Databricks
-- Gold layer design patterns
 
 ### Reference Materials
 - **Query and Visualize Data**: [Tutorial: Query and Visualize Data from a Notebook](https://learn.microsoft.com/en-us/azure/databricks/getting-started/quick-start)
@@ -155,15 +145,41 @@ Integrate all previous challenges into:
 3. **Monitoring**: Add logging and status tracking
 4. **Scheduling**: Set up automated pipeline execution
 
-### Skills You'll Learn
-- Pipeline orchestration
-- Workflow automation
-- Production data pipeline best practices
 
 ### Reference Materials
 - **Azure Databricks Jobs**: [Jobs Documentation](https://learn.microsoft.com/en-us/azure/databricks/workflows/jobs/)
 - **Azure Data Factory Pipelines**: [ADF Pipeline Guide](https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipelines-activities)
 
+
+---
+
+## Task 6: AI-Powered Driving Assistant Application
+**Goal**: Create an intelligent driving assistant that leverages aggregated data and AI services
+
+**📝 Create a Streamlit Application**: Build an interactive web application that provides real-time traffic safety insights using Azure AI services.
+
+Develop an application that:
+1. **Interactive Image Analysis**: Allow users to select or upload traffic images for analysis
+2. **AI-Powered Safety Reminders**: Generate contextual safety recommendations using Azure OpenAI
+3. **Multilingual Voice Assistance**: Provide audio safety warnings in multiple languages using Azure Speech Services
+4. **Statistical Context**: Leverage Gold layer aggregated data to provide historical context for traffic conditions
+5. **Real-time Processing**: Integrate live traffic analysis with pre-computed statistical baselines
+
+### Key Features
+- **Smart Image Selection**: Grid-based interface for browsing traffic scenarios
+- **Contextual AI Analysis**: Compare current conditions against historical averages from aggregated data
+- **Voice-Enabled Alerts**: Text-to-speech safety reminders in English, Chinese, Korean, and Japanese
+- **Statistical Insights**: Display weather patterns, object frequencies, and scene distributions
+- **Modal Interface**: Clean, user-friendly popup dialogs for detailed analysis
+
+
+### Reference Materials
+- **Azure OpenAI Service**: [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+- **Azure Speech Services**: [Speech Service Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+
+### Solution Reference
+`solution/notebooks/streamlit_simple.py` - A complete AI-powered driving assistant application
 
 ---
 

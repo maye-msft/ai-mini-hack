@@ -1,0 +1,126 @@
+{
+  "image_filename": "6188b7cc-8e1f2f0d.jpg",
+  "video_name": "6188b7cc-8e1f2f0d.jpg",
+  "frame_index": 0,
+  "metadata": {
+    "weather": "overcast",
+    "scene": "residential",
+    "timeofday": "daytime"
+  },
+  "labels": [
+    {
+      "id": "692485",
+      "attributes": {
+        "occluded": false,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "traffic sign",
+      "box2d": {
+        "x1": 496.433804,
+        "y1": 265.78978,
+        "x2": 514.006681,
+        "y2": 273.477911
+      }
+    },
+    {
+      "id": "692486",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 431.414144,
+        "y1": 304.669775,
+        "x2": 523.671753,
+        "y2": 391.435864
+      }
+    },
+    {
+      "id": "692487",
+      "attributes": {
+        "occluded": true,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 440.200582,
+        "y1": 317.849433,
+        "x2": 687.319181,
+        "y2": 480.398555
+      }
+    },
+    {
+      "id": "692488",
+      "attributes": {
+        "occluded": false,
+        "truncated": true,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 0.0,
+        "y1": 168.479972,
+        "x2": 445.692096,
+        "y2": 566.126749
+      }
+    },
+    {
+      "id": "692489",
+      "attributes": {
+        "occluded": false,
+        "truncated": true,
+        "trafficLightColor": "NA"
+      },
+      "category": "car",
+      "box2d": {
+        "x1": 553.661593,
+        "y1": 334.324006,
+        "x2": 1276.669577,
+        "y2": 718.89111
+      }
+    },
+    {
+      "id": "692490",
+      "attributes": {
+        "occluded": false,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "traffic sign",
+      "box2d": {
+        "x1": 497.607442,
+        "y1": 277.072616,
+        "x2": 509.588959,
+        "y2": 295.044894
+      }
+    },
+    {
+      "id": "692491",
+      "attributes": {
+        "occluded": false,
+        "truncated": false,
+        "trafficLightColor": "NA"
+      },
+      "category": "traffic sign",
+      "box2d": {
+        "x1": 683.320979,
+        "y1": 193.950831,
+        "x2": 708.781703,
+        "y2": 220.160404
+      }
+    }
+  ],
+  "attributes": {
+    "weather": "overcast",
+    "timeofday": "daytime",
+    "scene": "residential"
+  },
+  "processing_info": {
+    "processed_at": "2025-07-07T01:09:14.865359",
+    "source": "bdd100k_complete_preprocessing_refactored"
+  }
+}

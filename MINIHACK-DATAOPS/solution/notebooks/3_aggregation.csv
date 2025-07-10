@@ -1,0 +1,136 @@
+weather,timeofday,scene,mapped_category,total_count,total_images,avg_count,std_dev,q1_count,median_count,q3_count,min_count,max_count
+clear,dawn/dusk,city street,pedestrian,100,28,3.57,3.32,1,2,5,1,16
+clear,dawn/dusk,city street,traffic_sign,334,58,5.76,4.25,3,5,8,1,17
+clear,dawn/dusk,city street,vehicle,758,65,11.66,5.53,8,12,15,1,23
+clear,dawn/dusk,highway,pedestrian,10,3,3.33,4.04,1,1,8,1,8
+clear,dawn/dusk,highway,traffic_sign,251,43,5.84,3.96,2,4,10,1,15
+clear,dawn/dusk,highway,vehicle,480,47,10.21,7.12,5,10,13,1,40
+clear,dawn/dusk,parking lot,pedestrian,2,1,2,null,2,2,2,2,2
+clear,dawn/dusk,parking lot,traffic_sign,3,1,3,null,3,3,3,3,3
+clear,dawn/dusk,parking lot,vehicle,33,2,16.5,4.95,13,13,20,13,20
+clear,dawn/dusk,residential,pedestrian,11,5,2.2,0.84,2,2,3,1,3
+clear,dawn/dusk,residential,traffic_sign,68,11,6.18,3.84,3,6,8,1,14
+clear,dawn/dusk,residential,vehicle,149,15,9.93,4.8,6,10,13,3,20
+clear,daytime,city street,pedestrian,1202,275,4.37,4.2,1,3,6,1,22
+clear,daytime,city street,traffic_sign,3726,459,8.12,6.02,3,7,11,1,34
+clear,daytime,city street,vehicle,6148,500,12.3,6.23,7,12,17,1,34
+clear,daytime,gas stations,pedestrian,1,1,1,null,1,1,1,1,1
+clear,daytime,gas stations,traffic_sign,4,1,4,null,4,4,4,4,4
+clear,daytime,gas stations,vehicle,6,1,6,null,6,6,6,6,6
+clear,daytime,highway,pedestrian,111,49,2.27,2.67,1,1,2,1,17
+clear,daytime,highway,traffic_sign,1265,239,5.29,4.57,2,4,7,1,30
+clear,daytime,highway,vehicle,3153,268,11.76,6.76,7,10,16,1,36
+clear,daytime,parking lot,pedestrian,3,3,1,0,1,1,1,1,1
+clear,daytime,parking lot,traffic_sign,22,5,4.4,2.51,3,3,6,2,8
+clear,daytime,parking lot,vehicle,109,8,13.63,8.63,5,12,17,4,29
+clear,daytime,residential,pedestrian,125,57,2.19,2.45,1,1,2,1,12
+clear,daytime,residential,traffic_sign,634,130,4.88,4.01,2,4,6,1,21
+clear,daytime,residential,vehicle,2148,173,12.42,6.38,8,12,16,1,33
+clear,night,city street,pedestrian,78,19,4.11,2.83,1,4,6,1,10
+clear,night,city street,traffic_sign,529,72,7.35,4.59,4,7,10,1,24
+clear,night,city street,vehicle,684,75,9.12,5.27,5,8,12,1,24
+clear,night,highway,pedestrian,2,2,1,0,1,1,1,1,1
+clear,night,highway,traffic_sign,122,19,6.42,4.59,3,5,12,1,16
+clear,night,highway,vehicle,208,26,8,6.03,4,6,9,1,22
+clear,night,residential,traffic_sign,8,4,2,1.15,1,1,3,1,3
+clear,night,residential,vehicle,58,7,8.29,5.74,3,8,12,1,18
+foggy,dawn/dusk,highway,traffic_sign,7,1,7,null,7,7,7,7,7
+foggy,dawn/dusk,highway,vehicle,10,1,10,null,10,10,10,10,10
+foggy,daytime,residential,vehicle,6,1,6,null,6,6,6,6,6
+overcast,dawn/dusk,city street,pedestrian,121,31,3.9,4.56,1,2,4,1,20
+overcast,dawn/dusk,city street,traffic_sign,452,55,8.22,5.36,3,7,12,1,21
+overcast,dawn/dusk,city street,vehicle,687,58,11.84,6.49,7,10,15,1,29
+overcast,dawn/dusk,highway,pedestrian,5,2,2.5,2.12,1,1,4,1,4
+overcast,dawn/dusk,highway,traffic_sign,126,27,4.67,3.92,2,4,6,1,20
+overcast,dawn/dusk,highway,vehicle,381,28,13.61,9.98,5,11,20,2,43
+overcast,dawn/dusk,parking lot,vehicle,15,1,15,null,15,15,15,15,15
+overcast,dawn/dusk,residential,pedestrian,11,5,2.2,1.3,1,2,3,1,4
+overcast,dawn/dusk,residential,traffic_sign,32,10,3.2,2.15,2,2,5,1,7
+overcast,dawn/dusk,residential,vehicle,149,11,13.55,7.75,8,13,20,2,28
+overcast,daytime,city street,pedestrian,1169,208,5.62,5.96,1,3,8,1,29
+overcast,daytime,city street,traffic_sign,3035,325,9.34,6.1,5,8,13,1,29
+overcast,daytime,city street,vehicle,4617,360,12.83,6.24,8,12,16,1,40
+overcast,daytime,highway,pedestrian,34,18,1.89,1.64,1,1,2,1,7
+overcast,daytime,highway,traffic_sign,717,133,5.39,3.86,3,4,7,1,23
+overcast,daytime,highway,vehicle,1684,143,11.78,7.37,6,11,16,1,37
+overcast,daytime,parking lot,pedestrian,3,2,1.5,0.71,1,1,2,1,2
+overcast,daytime,parking lot,traffic_sign,18,3,6,7,1,3,14,1,14
+overcast,daytime,parking lot,vehicle,73,3,24.33,11.55,11,31,31,11,31
+overcast,daytime,residential,pedestrian,89,36,2.47,3.26,1,1,2,1,15
+overcast,daytime,residential,traffic_sign,375,80,4.69,4.1,1,3,7,1,17
+overcast,daytime,residential,vehicle,1438,105,13.7,6.36,9,14,18,1,29
+partly cloudy,dawn/dusk,city street,pedestrian,73,16,4.56,5.43,1,3,5,1,22
+partly cloudy,dawn/dusk,city street,traffic_sign,262,29,9.03,6.84,4,7,12,1,31
+partly cloudy,dawn/dusk,city street,vehicle,366,29,12.62,6.9,8,11,17,1,34
+partly cloudy,dawn/dusk,highway,pedestrian,13,5,2.6,2.3,1,1,4,1,6
+partly cloudy,dawn/dusk,highway,traffic_sign,65,13,5,4.1,2,3,9,1,13
+partly cloudy,dawn/dusk,highway,vehicle,177,15,11.8,8.04,5,9,17,2,30
+partly cloudy,dawn/dusk,residential,pedestrian,3,2,1.5,0.71,1,1,2,1,2
+partly cloudy,dawn/dusk,residential,traffic_sign,17,5,3.4,1.95,2,4,4,1,6
+partly cloudy,dawn/dusk,residential,vehicle,102,6,17,4.9,12,17,20,11,24
+partly cloudy,daytime,city street,pedestrian,419,92,4.55,4.21,1,3,6,1,19
+partly cloudy,daytime,city street,traffic_sign,1326,158,8.39,5.45,4,8,13,1,26
+partly cloudy,daytime,city street,vehicle,2400,173,13.87,7.55,8,13,18,1,49
+partly cloudy,daytime,highway,pedestrian,38,15,2.53,2.03,1,2,4,1,8
+partly cloudy,daytime,highway,traffic_sign,674,109,6.18,5.25,2,5,9,1,37
+partly cloudy,daytime,highway,vehicle,1307,117,11.17,5.64,7,11,15,1,25
+partly cloudy,daytime,parking lot,traffic_sign,9,1,9,null,9,9,9,9,9
+partly cloudy,daytime,parking lot,vehicle,19,1,19,null,19,19,19,19,19
+partly cloudy,daytime,residential,pedestrian,17,10,1.7,1.16,1,1,3,1,4
+partly cloudy,daytime,residential,traffic_sign,170,37,4.59,5.41,1,3,6,1,29
+partly cloudy,daytime,residential,vehicle,596,46,12.96,5.23,9,13,18,4,25
+partly cloudy,night,city street,traffic_sign,8,1,8,null,8,8,8,8,8
+partly cloudy,night,city street,vehicle,7,1,7,null,7,7,7,7,7
+rainy,dawn/dusk,city street,pedestrian,23,9,2.56,1.13,2,3,3,1,4
+rainy,dawn/dusk,city street,traffic_sign,150,19,7.89,3.96,4,8,11,2,14
+rainy,dawn/dusk,city street,vehicle,180,19,9.47,4.99,6,8,10,4,23
+rainy,dawn/dusk,highway,pedestrian,1,1,1,null,1,1,1,1,1
+rainy,dawn/dusk,highway,traffic_sign,41,6,6.83,4.62,4,5,10,1,14
+rainy,dawn/dusk,highway,vehicle,88,7,12.57,10.18,5,8,26,3,28
+rainy,dawn/dusk,residential,traffic_sign,9,2,4.5,2.12,3,3,6,3,6
+rainy,dawn/dusk,residential,vehicle,38,4,9.5,5.07,6,7,8,6,17
+rainy,daytime,city street,pedestrian,289,78,3.71,3.72,1,3,5,1,22
+rainy,daytime,city street,traffic_sign,988,115,8.59,5.81,4,7,12,1,25
+rainy,daytime,city street,vehicle,1423,127,11.2,5.39,7,11,15,2,25
+rainy,daytime,highway,pedestrian,12,5,2.4,1.67,1,2,3,1,5
+rainy,daytime,highway,traffic_sign,265,43,6.16,5.97,2,4,8,1,35
+rainy,daytime,highway,vehicle,451,48,9.4,5.93,5,9,12,1,27
+rainy,daytime,parking lot,traffic_sign,6,1,6,null,6,6,6,6,6
+rainy,daytime,parking lot,vehicle,17,2,8.5,4.95,5,5,12,5,12
+rainy,daytime,residential,pedestrian,11,6,1.83,1.6,1,1,2,1,5
+rainy,daytime,residential,traffic_sign,104,24,4.33,3.56,2,3,5,1,15
+rainy,daytime,residential,vehicle,345,32,10.78,6.07,6,9,14,2,24
+rainy,night,city street,traffic_sign,22,5,4.4,3.44,2,3,7,1,9
+rainy,night,city street,vehicle,60,5,12,5.7,10,11,17,4,18
+rainy,night,highway,pedestrian,3,2,1.5,0.71,1,1,2,1,2
+rainy,night,highway,traffic_sign,21,3,7,2,5,7,9,5,9
+rainy,night,highway,vehicle,26,3,8.67,1.15,8,8,10,8,10
+rainy,night,residential,pedestrian,1,1,1,null,1,1,1,1,1
+rainy,night,residential,vehicle,9,1,9,null,9,9,9,9,9
+snowy,dawn/dusk,city street,pedestrian,48,15,3.2,3.14,1,2,4,1,10
+snowy,dawn/dusk,city street,traffic_sign,202,23,8.78,6.36,4,7,11,1,26
+snowy,dawn/dusk,city street,vehicle,294,25,11.76,5.09,8,11,16,3,20
+snowy,dawn/dusk,highway,traffic_sign,26,5,5.2,3.77,2,5,9,1,9
+snowy,dawn/dusk,highway,vehicle,66,5,13.2,9.63,6,11,20,3,26
+snowy,dawn/dusk,residential,pedestrian,5,3,1.67,0.58,1,2,2,1,2
+snowy,dawn/dusk,residential,traffic_sign,28,4,7,6.68,1,2,10,1,15
+snowy,dawn/dusk,residential,vehicle,61,5,12.2,4.32,9,13,14,7,18
+snowy,daytime,city street,pedestrian,334,80,4.18,4.15,2,3,5,1,22
+snowy,daytime,city street,traffic_sign,1014,129,7.86,5.76,3,6,12,1,26
+snowy,daytime,city street,vehicle,1425,140,10.18,5.51,6,10,14,1,27
+snowy,daytime,highway,pedestrian,8,4,2,1.41,1,1,2,1,4
+snowy,daytime,highway,traffic_sign,180,29,6.21,4.12,3,5,9,1,17
+snowy,daytime,highway,vehicle,322,33,9.76,5.32,6,8,12,2,22
+snowy,daytime,parking lot,pedestrian,2,2,1,0,1,1,1,1,1
+snowy,daytime,parking lot,traffic_sign,6,3,2,1,1,2,3,1,3
+snowy,daytime,parking lot,vehicle,44,3,14.67,9.07,5,16,23,5,23
+snowy,daytime,residential,pedestrian,30,20,1.5,0.76,1,1,2,1,3
+snowy,daytime,residential,traffic_sign,149,35,4.26,4.35,2,3,6,1,20
+snowy,daytime,residential,vehicle,624,49,12.73,5.82,8,13,17,2,25
+snowy,night,city street,pedestrian,9,4,2.25,1.89,1,1,2,1,5
+snowy,night,city street,traffic_sign,91,9,10.11,5.84,6,9,11,3,20
+snowy,night,city street,vehicle,60,9,6.67,2.65,4,8,9,3,10
+snowy,night,highway,traffic_sign,3,1,3,null,3,3,3,3,3
+snowy,night,highway,vehicle,5,1,5,null,5,5,5,5,5
+snowy,night,residential,traffic_sign,1,1,1,null,1,1,1,1,1
+snowy,night,residential,vehicle,16,1,16,null,16,16,16,16,16
