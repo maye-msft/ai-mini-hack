@@ -1,0 +1,47 @@
+# Core Python libraries
+PyYAML>=6.0
+tqdm>=4.65.0
+Jinja2>=3.1.0
+python-dotenv>=1.0.0
+
+# Image processing
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Azure SDKs for blob access
+azure-storage-blob>=12.19.0
+azure-identity>=1.15.0
+
+# Azure SDK
+azure-ai-inference
+azure-cognitiveservices-vision-customvision>=3.1.0
+azure-cognitiveservices-vision-computervision
+msrest>=0.7.1
+
+# OpenAI or Azure OpenAI
+openai>=1.25.0
+
+# Experiment tracking (optional)
+mlflow>=2.11.1
+
+# Data processing and evaluation
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# YOLOv8 and vision models
+ultralytics>=8.1.25
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Development tools and linters
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0
+pre-commit>=3.3.0
+bandit>=1.7.5
+pylint>=2.17.0
+autopep8>=2.0.0
+
+# Type stubs for better type checking
+types-PyYAML>=6.0.0
+types-tqdm>=4.65.0

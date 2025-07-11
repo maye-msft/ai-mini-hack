@@ -1,0 +1,107 @@
+# config/settings.yaml
+
+# General execution environment
+environment: local # Options: local, azureml, databricks
+
+# Storage configuration for run management
+storage:
+  base_output:
+    type: local
+    path: ./data/output
+
+# Configuration for the annotation process
+annotate:
+  # Storage configuration for annotation
+  storage:
+    images:
+      type: local
+      path: ./data/raw/images
+    generated_annotations:
+      type: local
+      path: ./data/output/${RUN_ID}/annotations
+
+  # Scene classification configuration
+  scene_classifier:
+    type: openai # Options: openai, local
+    endpoint: ${AZURE_OPENAI_ENDPOINT} # Direct environment variable
+    api_key: ${AZURE_OPENAI_API_KEY} # Direct environment variable
+    model_name: gpt-4o # Model configuration
+    prompt_version: v1 # Prompt version to use
+    temperature: 0.2 # Model temperature
+    max_tokens: 512 # Max response tokens
+    api_version: 2024-12-01-preview # Azure OpenAI API version
+
+  # Object detection configuration
+  object_detector:
+    model_type: azure_foundry
+    endpoint: ${AZURE_FOUNDRY_OBJECT_DETECTION_ENDPOINT} # Direct environment variable
+    api_key: ${AZURE_FOUNDRY_OBJECT_DETECTION_API_KEY} # Direct environment variable
+    deployment_name: "mmd-3x-yolof-r50-c5-8x8-1x-c-13"
+    confidence_threshold: 0.5
+
+    # Optional: Map class IDs to meaningful names
+    # This is useful if your model returns numeric class IDs
+    class_names:
+      0: "person"
+      1: "bicycle"
+      2: "car"
+      3: "motorcycle"
+      4: "airplane"
+      5: "bus"
+      6: "train"
+      7: "truck"
+      8: "boat"
+      9: "traffic light"
+
+  # Error handling and processing options
+  continue_on_error: true
+  max_consecutive_failures: 10
+
+# Configuration for the visualization process
+visualize:
+  # Storage configuration for visualization
+  storage:
+    images:
+      type: local
+      path: ./data/raw/images
+    ground_truth_annotations:
+      type: local
+      path: ./data/raw/labels
+    generated_annotations:
+      type: local
+      path: ./data/output/${RUN_ID}/annotations
+    visualizations_output:
+      type: local
+      path: ./data/output/${RUN_ID}/visualizations
+
+# Configuration for the evaluation process
+evaluate:
+  # Storage configuration for evaluation
+  storage:
+    generated_annotations:
+      type: local
+      path: ./data/output/${RUN_ID}/annotations
+    ground_truth_annotations:
+      type: local
+      path: ./data/raw/labels
+    evaluation_output:
+      type: local
+      path: ./data/output/${RUN_ID}
+  evaluation:
+    enabled: true
+    iou_threshold: 0.5
+    category_mapping:
+      # Map similar categories to canonical names for evaluation
+      car: vehicle
+      truck: vehicle
+      bus: vehicle
+      motorcycle: vehicle
+      bicycle: vehicle
+      van: vehicle
+      "land vehicle": vehicle
+      "shuttle bus": vehicle
+      "traffic light": traffic_light
+      "traffic sign": traffic_sign
+      "stop sign": traffic_sign
+      person: person
+      pedestrian: person

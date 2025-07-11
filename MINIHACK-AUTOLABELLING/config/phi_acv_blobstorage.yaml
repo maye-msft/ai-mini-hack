@@ -1,0 +1,110 @@
+# config/azure.yaml
+
+# General execution environment
+environment: local # Options: local, azureml, databricks
+
+# Storage configuration for run management
+storage:
+  base_output:
+    type: azure_blob
+    account_endpoint: ${AZURE_STORAGE_ACCOUNT_ENDPOINT}
+    account_key: ${AZURE_STORAGE_ACCOUNT_KEY}
+    container_name: ktminihack
+    path: challenge2/output/
+
+# Configuration for the annotation process
+annotate:
+  # Storage configuration for annotation
+  storage:
+    images:
+      type: local
+      path: ./data/raw/images
+    generated_annotations:
+      type: azure_blob
+      account_endpoint: ${AZURE_STORAGE_ACCOUNT_ENDPOINT}
+      account_key: ${AZURE_STORAGE_ACCOUNT_KEY}
+      container_name: ktminihack
+      path: challenge2/output/${RUN_ID}/annotations
+
+  # Scene classification configuration
+  scene_classifier:
+    type: phi # Options: openai, phi
+    endpoint: ${AZURE_FOUNDRY_CHAT_COMPLETION_MODEL_ENDPOINT} # Direct environment variable
+    api_key: ${AZURE_FOUNDRY_CHAT_COMPLETION_MODEL_API_KEY} # Direct environment variable
+    model_name: Phi-4-multimodal-instruct # Model configuration
+    prompt_version: v1 # Prompt version to use
+    temperature: 0.2 # Model temperature
+    max_tokens: 512 # Max response tokens
+    api_version: 2024-05-01-preview
+
+  # Object detection configuration
+  object_detector:
+    model_type: azure_computer_vision # Options: yolov5, azure_computer_vision, onnx
+    endpoint: ${AZURE_COMPUTER_VISION_ENDPOINT}
+    api_key: ${AZURE_COMPUTER_VISION_API_KEY}
+    confidence_threshold: 0.25
+
+  # Error handling and processing options
+  continue_on_error: true
+  max_consecutive_failures: 10
+
+# Configuration for the visualization process
+visualize:
+  # Storage configuration for visualization
+  storage:
+    images:
+      type: local
+      path: ./data/raw/images
+    ground_truth_annotations:
+      type: local
+      path: ./data/raw/labels
+    generated_annotations:
+      type: azure_blob
+      account_endpoint: ${AZURE_STORAGE_ACCOUNT_ENDPOINT}
+      account_key: ${AZURE_STORAGE_ACCOUNT_KEY}
+      container_name: ktminihack
+      path: challenge2/output/${RUN_ID}/annotations
+    visualizations_output:
+      type: azure_blob
+      account_endpoint: ${AZURE_STORAGE_ACCOUNT_ENDPOINT}
+      account_key: ${AZURE_STORAGE_ACCOUNT_KEY}
+      container_name: ktminihack
+      path: challenge2/output/${RUN_ID}/visualizations
+
+# Configuration for the evaluation process
+evaluate:
+  # Storage configuration for evaluation
+  storage:
+    generated_annotations:
+      type: azure_blob
+      account_endpoint: ${AZURE_STORAGE_ACCOUNT_ENDPOINT}
+      account_key: ${AZURE_STORAGE_ACCOUNT_KEY}
+      container_name: ktminihack
+      path: challenge2/output/${RUN_ID}/annotations
+    ground_truth_annotations:
+      type: local
+      path: ./data/raw/labels
+    evaluation_output:
+      type: azure_blob
+      account_endpoint: ${AZURE_STORAGE_ACCOUNT_ENDPOINT}
+      account_key: ${AZURE_STORAGE_ACCOUNT_KEY}
+      container_name: ktminihack
+      path: challenge2/output/${RUN_ID}
+  evaluation:
+    enabled: true
+    iou_threshold: 0.5
+    category_mapping:
+      # Map similar categories to canonical names for evaluation
+      car: vehicle
+      truck: vehicle
+      bus: vehicle
+      motorcycle: vehicle
+      bicycle: vehicle
+      van: vehicle
+      "land vehicle": vehicle
+      "shuttle bus": vehicle
+      "traffic light": traffic_light
+      "traffic sign": traffic_sign
+      "stop sign": traffic_sign
+      person: person
+      pedestrian: person

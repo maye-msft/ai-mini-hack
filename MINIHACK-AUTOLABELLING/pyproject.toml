@@ -1,0 +1,91 @@
+[tool.black]
+line-length = 120
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 120
+known_first_party = ["src", "core", "models", "storage", "utils"]
+known_third_party = ["azure", "openai", "torch", "cv2", "PIL", "yaml", "tqdm"]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+
+[tool.bandit]
+exclude_dirs = ["tests", "test_*"]
+skips = ["B101", "B701"]
+
+[tool.pylint.messages_control]
+disable = [
+    "C0103",  # invalid-name
+    "C0114",  # missing-module-docstring
+    "C0115",  # missing-class-docstring
+    "C0116",  # missing-function-docstring
+    "C0415",  # import-outside-toplevel (acceptable for optional imports)
+    "R0903",  # too-few-public-methods
+    "R0911",  # too-many-return-statements (common in error handling)
+    "R0913",  # too-many-arguments
+    "R0917",  # too-many-positional-arguments
+    "W0107",  # unnecessary-pass (required for abstract methods)
+    "W0134",  # return-in-finally (acceptable for cleanup)
+    "W0150",  # lost-exception (acceptable for cleanup)
+    "W0201",  # attribute-defined-outside-init (common in dynamic config)
+    "W0231",  # super-init-not-called (not always needed)
+    "W0612",  # unused-variable (common in image processing)
+    "W0613",  # unused-argument
+    "W0707",  # raise-missing-from (not always necessary)
+    "W1201",  # logging-not-lazy (f-strings are more readable)
+    "R0914",  # too-many-locals (often unavoidable in data processing)
+    "R0912",  # too-many-branches (common in configuration/setup code)
+    "R0915",  # too-many-statements (common in main functions)
+    "R0902",  # too-many-instance-attributes (common in config/data classes)
+    "R1702",  # too-many-nested-blocks (common in error handling)
+    "R1705",  # no-else-return (sometimes clearer with else)
+    "R1724",  # no-else-continue (sometimes clearer with else)
+    "E1101",  # no-member (OpenCV has dynamic attributes)
+    "W0718",  # broad-exception-caught (acceptable for top-level error handling)
+    "W1203",  # logging-fstring-interpolation (f-strings are more readable)
+]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+max-complexity = 20
+ignore = [
+    "E203",  # whitespace before ':' (conflicts with black)
+    "E231",  # missing whitespace after ':' (conflicts with black auto-formatting)
+    "E241",  # multiple spaces after ':' (conflicts with black auto-formatting)
+    "E702",  # multiple statements on one line (sometimes auto-generated)
+    "W503",  # line break before binary operator (conflicts with black)
+    "E501",  # line too long (handled by black)
+    "C901",  # function too complex (acceptable for main processing functions)
+]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".mypy_cache",
+    ".pytest_cache",
+    "build",
+    "dist",
+    ".venv",
+    "venv",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
