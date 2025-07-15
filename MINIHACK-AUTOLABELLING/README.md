@@ -516,8 +516,8 @@ This makes it easier to compare and visualize your results against the ground tr
 
 An evaluation tool that:
 
-- Calculates **object detection metrics**: Precision, Recall, F1-score, mAP (mean Average Precision)
 - Computes **scene classification accuracy**: How well your predicted attributes match ground truth
+- Calculates **object detection metrics**: Precision, Recall, F1-score, mAP (mean Average Precision)
 - Provides **per-category performance**: Identify strengths and weaknesses by object type
 - Analyzes **IoU (Intersection over Union)** for box-level matching
 
@@ -729,9 +729,20 @@ A pipeline system that combines your Tasks 1-4 into an automated workflow with:
 
 You have complete freedom in how you approach this. Some ideas to consider:
 
-#### Simple Script Approach
+#### 🌀 Simple Script Approach
+
+Start with a straightforward Python script that chains your existing components together. This approach lets you build incrementally - begin with a basic script, then add configuration management, error handling, and eventually scale to DevOps pipelines and cloud orchestration.
+
+**🎓 Getting Started Suggestions:**
+
+1. **Start simple**: Create a basic script that processes 5-10 images using your existing Task 1-4 code
+2. **Add configuration**: Move hardcoded values (API keys, thresholds) to a config file
+3. **Improve error handling**: Make sure one failed image doesn't crash the entire batch
+4. **Track results**: Save your outputs in an organized way with metadata
+5. **Compare approaches**: Run the same images with different model configurations and compare results
+
 ```python
-# Basic pipeline - process all images in a folder
+# Basic script - process all images in a folder
 def run_pipeline(image_folder, config):
     results = []
     for image_path in glob.glob(f"{image_folder}/*.jpg"):
@@ -750,7 +761,7 @@ def run_pipeline(image_folder, config):
     return results, evaluation
 ```
 
-#### Enterprise Pipeline Services
+#### 🌀 Enterprise Pipeline Services
 
 For production-scale systems, consider leveraging Microsoft's enterprise services:
 
@@ -765,50 +776,6 @@ For production-scale systems, consider leveraging Microsoft's enterprise service
 - **Team Collaboration**: Shared workspaces with role-based access control
 
 Ideal when processing thousands of images, need team collaboration, require automatic scaling, or want enterprise-grade MLOps capabilities.
-
----
-
-#### Advanced Pipeline Ideas
-- **Configuration files**: Use YAML or JSON to define different experimental setups
-- **Run directories**: Create unique folders for each experimental run with timestamps
-- **Resumable processing**: Track which images have been processed and skip them on restart
-- **Parallel processing**: Process multiple images simultaneously for speed
-- **Model ensembles**: Combine predictions from multiple models for better accuracy
-
----
-
-### 📋 Sample Questions to Guide Your Design
-
-1. **What configuration options do you want to make easily changeable?**
-   - Model endpoints and API keys
-   - Confidence thresholds
-   - Output directories
-   - Which steps to run (annotate, visualize, evaluate)
-
-2. **How will you organize your outputs?**
-   - Separate folders for each run?
-   - Timestamped directories?
-   - Flat structure or organized by image/step?
-
-3. **What happens when things go wrong?**
-   - API rate limits or timeouts
-   - Invalid images or missing ground truth
-   - Authentication failures
-
-4. **How will you track and compare experiments?**
-   - Summary statistics in JSON files?
-   - Simple CSV logs?
-   - Database storage?
-
----
-
-### 🎓 Getting Started Suggestions
-
-1. **Start simple**: Create a basic script that processes 5-10 images using your existing Task 1-4 code
-2. **Add configuration**: Move hardcoded values (API keys, thresholds) to a config file
-3. **Improve error handling**: Make sure one failed image doesn't crash the entire batch
-4. **Track results**: Save your outputs in an organized way with metadata
-5. **Compare approaches**: Run the same images with different model configurations and compare results
 
 ---
 
